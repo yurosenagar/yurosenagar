@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- File: about-this-site.html -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="About this website — how yurosenagar.com was designed, built and deployed, including how AI supported the process.">
+  <meta name="theme-color" content="#ffffff">
+  <title>About this website — yurose nagar</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections/page.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/features/theme.js"></script>
+
+  <script defer src="assets/js/types/content-types.js"></script>
+  <script defer src="assets/js/data/site-content.js"></script>
+  <script defer src="assets/js/utils/dom.js"></script>
+  <script defer src="assets/js/components/navbar.js"></script>
+  <script defer src="assets/js/components/motivation-ticker.js"></script>
+  <script defer src="assets/js/components/project-card.js"></script>
+  <script defer src="assets/js/components/services.js"></script>
+  <script defer src="assets/js/components/journey-timeline.js"></script>
+  <script defer src="assets/js/components/journal-list.js"></script>
+  <script defer src="assets/js/components/social-links.js"></script>
+  <script defer src="assets/js/components/footer.js"></script>
+  <script defer src="assets/js/features/navigation.js"></script>
+  <script defer src="assets/js/features/reveal.js"></script>
+  <script defer src="assets/js/features/placeholders.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+
+<div aria-hidden="true" class="noise"></div>
+<div aria-hidden="true" class="orb orb-light-blue"></div>
+<div aria-hidden="true" class="orb orb-deep-blue"></div>
+<div id="site-navbar"></div>
+<main>
+<section class="page-hero section-pad">
+<div class="shell reveal">
+<div class="eyebrow"><span class="status-dot"></span> ABOUT THIS WEBSITE</div>
+<h1>The portfolio is<br/>also the project.</h1>
+<p class="page-lead">This site is a documented development project — every section of it can be explained by hand.</p>
+</div>
+</section>
+
+<section class="section-pad">
+<div class="shell">
+<div class="about-grid">
+<div class="about-story">
+<div class="prose reveal">
+<h2>Why I built it</h2>
+<p>I wanted one clean personal brand with two honest zones: a polished, client-ready portfolio here at the root, and an open workshop at the labs subdomain where practice projects live without pressure. One domain, two connected experiences.</p>
+</div>
+<div class="prose reveal">
+<h2>How it’s made</h2>
+<p>Hand-written <strong>HTML, CSS and JavaScript</strong> — no frameworks, no build step. The code follows a modular structure: markup in page files, styling split by responsibility across CSS files, and logic separated into components, features, services and utilities. All editable text lives in a single content file.</p>
+</div>
+<div class="prose reveal">
+<h2>How AI supported the process</h2>
+<p>I used AI to explore structures, generate first drafts and troubleshoot. <strong>I reviewed, modified and tested the final implementation myself.</strong> Being specific about what the tool suggested, what I changed and how I validated it matters more to me than pretending no AI was used.</p>
+</div>
+<div class="prose reveal">
+<h2>How it’s deployed</h2>
+<p>Version-controlled on <strong>GitHub</strong>, deployed on <strong>Vercel</strong>, with the labs subdomain configured as an independent DNS record pointing at its own project.</p>
+</div>
+<div class="prose reveal">
+<h2>Roadmap</h2>
+<p>Accessibility passes, performance tuning, real project screenshots, a working contact form and — once JavaScript feels like home — a considered move toward React. Not because it’s fashionable, but when I understand what problem it solves.</p>
+</div>
+</div>
+<div class="about-facts reveal">
+<div class="about-fact"><span>STACK</span><strong>HTML · CSS · JavaScript</strong></div>
+<div class="about-fact"><span>FONT</span><strong>Space Grotesk, throughout</strong></div>
+<div class="about-fact"><span>HOSTING</span><strong>GitHub → Vercel</strong></div>
+<div class="about-fact"><span>WORKSHOP</span><strong>labs.yurosenagar.com</strong></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-pad">
+<div class="shell reveal">
+<div class="cta-band">
+<div>
+<h2>Want to see the messy parts?</h2>
+<p>The experiments behind this site live in Labs.</p>
+</div>
+<a class="button button-primary" href="labs/index.html">Visit Labs <span>↗</span></a>
+</div>
+</div>
+</section>
+</main>
+<div id="site-footer"></div>
+
+</body>
+</html>

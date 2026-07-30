@@ -1,0 +1,32 @@
+/* File: labs/assets/css/tokens.css */
+
+:root {
+  /* Same foundation as the main site */
+  --bg: #09111a;
+  --panel: #101a24;
+  --panel-2: #13202c;
+  --line: #253646;
+  --text: #dce6ed;
+  --muted: #7f8f9d;
+
+  --blue: #345b78;
+  --blue-soft: #91c8e8;
+  --blue-deep: #10283a;
+  --green: #39ff88;
+  --green-soft: #a9ffc9;
+  --red: #e10600;
+  --red-soft: #ff726d;
+
+  --navy: #071019;
+  --white: #f5f8fa;
+
+  /* Labs identity: racing red leads, green supports */
+  --labs-accent: var(--red-soft);
+
+  /* One font throughout */
+  --sans: "Space Grotesk", Arial, sans-serif;
+  --mono: "Space Grotesk", Arial, sans-serif;
+
+  --radius: 22px;
+  --shell: min(1240px, calc(100% - 44px));
+}

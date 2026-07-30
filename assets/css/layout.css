@@ -1,0 +1,38 @@
+/* File: assets/css/layout.css */
+
+.shell { width: var(--shell); margin-inline: auto; }
+.section-pad { padding: 100px 0; }
+
+.section-index {
+  display: inline-block;
+  color: var(--blue);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1.12fr .88fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 52px;
+}
+.section-heading h2 {
+  font-size: clamp(2.45rem, 4.6vw, 4.1rem);
+  line-height: 1.07;
+  letter-spacing: -.045em;
+  color: var(--navy);
+  margin: 14px 0 0;
+}
+.section-heading p {
+  color: var(--muted);
+  font-size: 1rem;
+  max-width: 450px;
+  margin: 0 0 6px;
+}
+
+.section-heading--compact h2 {
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+}

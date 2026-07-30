@@ -1,0 +1,190 @@
+/* File: assets/css/components.css */
+
+/* Navigation — same structure and links, palette follows the theme */
+.site-header {
+  position: fixed;
+  inset: 20px 0 auto;
+  z-index: 30;
+  pointer-events: none;
+}
+
+.nav-shell {
+  width: min(1160px, calc(100% - 32px));
+  margin: auto;
+  min-height: 64px;
+  padding: 8px 10px 8px 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background: color-mix(in srgb, var(--page) 88%, transparent);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 45px rgba(30, 64, 175, .08);
+  border-radius: 999px;
+  backdrop-filter: blur(18px);
+  pointer-events: auto;
+}
+[data-theme="dark"] .nav-shell { box-shadow: 0 14px 45px rgba(0, 0, 0, .35); }
+
+.brand {
+  width: max-content;
+  font: 700 17px/1 var(--sans);
+  letter-spacing: -.04em;
+  text-transform: lowercase;
+  color: var(--navy);
+}
+
+.brand::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 7px;
+  border-radius: 50%;
+  vertical-align: top;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, .15);
+}
+
+.nav-links { display: flex; gap: 4px; align-items: center; }
+.nav-links a {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 11px 16px;
+  border-radius: 999px;
+  transition: .25s ease;
+}
+.nav-links a:hover { color: var(--blue); background: rgba(37, 99, 235, .07); }
+.nav-links a.active { color: var(--blue); background: rgba(37, 99, 235, .09); }
+.nav-links .nav-cta {
+  margin-left: 4px;
+  color: var(--navy);
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+.nav-links .nav-cta:hover { background: var(--blue); border-color: var(--blue); color: #ffffff; }
+.nav-toggle { display: none; }
+
+/* Theme toggle */
+.theme-toggle {
+  width: 38px;
+  height: 38px;
+  margin-left: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--navy);
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: .25s ease;
+}
+.theme-toggle:hover { border-color: #93c5fd; color: var(--blue); }
+
+/* Buttons */
+.button {
+  min-height: 49px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font: 700 .82rem/1 var(--sans);
+  transition: .2s ease;
+}
+.button-primary { background: var(--blue); color: #ffffff; }
+.button-primary:hover { background: var(--blue-dark); }
+.button-ghost { border-color: var(--line); background: var(--surface); color: var(--navy); }
+.button-ghost:hover { border-color: #93c5fd; color: var(--blue); }
+
+/* Motivation ticker */
+.motivation-ticker {
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  background: var(--soft);
+}
+.motivation-ticker::before,
+.motivation-ticker::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  width: min(10vw, 120px);
+  pointer-events: none;
+}
+.motivation-ticker::before { left: 0; background: linear-gradient(90deg, var(--soft), transparent); }
+.motivation-ticker::after { right: 0; background: linear-gradient(270deg, var(--soft), transparent); }
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker-scroll 34s linear infinite;
+}
+.ticker-group { display: flex; align-items: center; flex-shrink: 0; }
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 13px;
+  padding: 20px 34px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .13em;
+  white-space: nowrap;
+}
+.ticker-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
+.ticker-dot-2 { background: var(--green); }
+.ticker-dot-3 { background: var(--blue-dark); }
+@keyframes ticker-scroll { to { transform: translateX(-50%); } }
+
+/* Project cards */
+.projects-grid { display: grid; gap: 20px; max-width: 1160px; margin-inline: auto; }
+.project-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.project-card:hover { transform: translateY(-4px); border-color: #93c5fd; box-shadow: var(--shadow); }
+.project-visual { min-height: 420px; position: relative; overflow: hidden; border-bottom: 1px solid var(--line); }
+.project-meta { padding: 28px 30px; display: grid; grid-template-columns: .9fr 1.1fr; column-gap: 44px; align-items: start; }
+.project-meta span {
+  color: var(--blue);
+  font-size: .69rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.project-meta h3 { margin: 9px 0 0; font-size: 1.55rem; letter-spacing: -.035em; color: var(--navy); line-height: 1.12; }
+.project-meta p { margin: 0; color: var(--muted); max-width: 650px; font-size: .95rem; }
+.project-meta ul { grid-column: 1 / -1; display: flex; gap: 7px; list-style: none; padding: 20px 0 0; margin: 21px 0 0; border-top: 1px solid var(--line); flex-wrap: wrap; }
+.project-meta li {
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--soft);
+  color: var(--text);
+  font-size: .68rem;
+  font-weight: 600;
+}
+
+/* Project card additions: role and link */
+.project-role { margin: 16px 0 0; font-size: .84rem; color: var(--text); letter-spacing: 0; }
+.project-role span { display: block; font-size: .62rem; font-weight: 700; letter-spacing: .12em; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; }
+.project-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: .78rem; font-weight: 700; color: var(--navy); }
+.project-link:hover { color: var(--blue); }
+.project-link span { font-size: inherit; color: inherit; letter-spacing: 0; text-transform: none; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); background: var(--page); padding: 28px 0 36px; }
+.footer-inner { display: grid; grid-template-columns: 1fr 2fr 1fr; align-items: center; font-size: .72rem; font-weight: 500; color: var(--muted); letter-spacing: .05em; }
+.footer-inner span:nth-child(2) { text-align: center; }
+.footer-inner a { text-align: right; }
+.footer-inner a:hover { color: var(--blue); }

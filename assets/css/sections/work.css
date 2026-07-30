@@ -1,0 +1,33 @@
+/* File: assets/css/sections/work.css */
+
+/* Japanese dining project artwork */
+.project-japan .project-visual { background: radial-gradient(circle at 18% 0%, rgba(229,73,37,.18), transparent 36%), #e8e1d5; color: #171513; }
+.phone { position: absolute; width: 254px; height: 490px; background: #111; border: 8px solid #191919; border-radius: 40px; box-shadow: 0 40px 80px rgba(30,20,10,.28); overflow: hidden; }
+.phone-a { top: 42px; left: 18%; transform: rotate(-5deg) scale(.88); transform-origin: top left; }
+.phone-notch { position: absolute; width: 84px; height: 22px; top: 8px; left: 50%; transform: translateX(-50%); background: #111; border-radius: 0 0 14px 14px; z-index: 2; }
+.phone-screen { position: absolute; inset: 0; padding: 44px 20px 22px; background: #f4eee4; }
+.mini-nav { display: flex; justify-content: space-between; font: 700 10px/1 var(--mono); }
+.mini-nav span:first-child { font-size: 22px; }
+.menu-screen h3 { margin: 42px 0 32px; font: 500 34px/.95 var(--sans); letter-spacing: -.04em; }
+.food-row { display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 10px; padding: 17px 0; border-top: 1px solid #cac0b2; }
+.food-row span { font: 600 8px/1 var(--mono); color: #8e8276; }
+.food-row b { font: 600 11px/1.25 var(--sans); }
+.food-row i { font: 600 9px/1 var(--mono); font-style: normal; }
+.menu-screen button { position: absolute; bottom: 20px; left: 20px; right: 20px; border: 0; background: #e34925; color: #fff; border-radius: 999px; height: 48px; font: 700 9px/1 var(--mono); }
+.japan-mark { position: absolute; right: 12%; top: 55px; font: 700 74px/.9 var(--sans); color: rgba(23,21,19,.09); writing-mode: vertical-rl; }
+.project-japan .project-visual::after { content: "NAGI / TOKYO DINING"; position: absolute; left: 51%; bottom: 54px; font: 700 14px/1 var(--mono); letter-spacing: .18em; }
+
+/* Kathmandu project artwork */
+.project-kathmandu .project-visual { background: #201c1a; color: #f0e8dc; }
+.ktm-grid { position: absolute; inset: 0; opacity: .18; background: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 65px 65px; }
+.ktm-coordinate { position: absolute; top: 30px; right: 34px; font: 500 9px/1.6 var(--mono); color: #9b8d83; text-align: right; }
+.ktm-title { position: absolute; left: 36px; bottom: 36px; z-index: 3; }
+.ktm-title span { display: block; font: 600 10px/1 var(--mono); color: var(--green); letter-spacing: .13em; margin-bottom: 16px; }
+.ktm-title strong { font: 600 clamp(44px, 7vw, 86px)/.85 var(--sans); letter-spacing: -.07em; }
+.ktm-window { position: absolute; width: 46%; right: 8%; top: 16%; background: rgba(226,216,201,.95); color: #211b18; border-radius: 8px; box-shadow: 0 28px 90px rgba(0,0,0,.32); transform: rotate(2deg); }
+.window-bar { height: 30px; border-bottom: 1px solid #c6bdb2; display: flex; gap: 5px; align-items: center; padding: 0 10px; }
+.window-bar span { width: 6px; height: 6px; border-radius: 50%; background: #988e84; }
+.window-content { padding: 44px 32px 38px; }
+.window-content small { font: 600 8px/1 var(--mono); letter-spacing: .14em; }
+.window-content h3 { font: 500 32px/1.05 var(--sans); max-width: 380px; margin: 28px 0 18px; }
+.window-content p { font-size: 12px; color: #6f645c; max-width: 300px; }

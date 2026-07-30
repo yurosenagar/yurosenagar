@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- File: index.html -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yurose Nagar — web designer & developer helping small businesses turn their character into websites customers remember.">
+  <meta name="theme-color" content="#ffffff">
+  <title>yurose nagar</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles are split by responsibility. Load order matters. -->
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections/hero.css">
+  <link rel="stylesheet" href="assets/css/sections/work.css">
+  <link rel="stylesheet" href="assets/css/sections/manifesto.css">
+  <link rel="stylesheet" href="assets/css/sections/contact.css">
+  <link rel="stylesheet" href="assets/css/sections/page.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/features/theme.js"></script>
+
+  <!-- Scripts use a small global namespace so pages also work when opened directly. -->
+  <script defer src="assets/js/types/content-types.js"></script>
+  <script defer src="assets/js/data/site-content.js"></script>
+  <script defer src="assets/js/utils/dom.js"></script>
+  <script defer src="assets/js/components/navbar.js"></script>
+  <script defer src="assets/js/components/motivation-ticker.js"></script>
+  <script defer src="assets/js/components/project-card.js"></script>
+  <script defer src="assets/js/components/services.js"></script>
+  <script defer src="assets/js/components/journey-timeline.js"></script>
+  <script defer src="assets/js/components/journal-list.js"></script>
+  <script defer src="assets/js/components/social-links.js"></script>
+  <script defer src="assets/js/components/footer.js"></script>
+  <script defer src="assets/js/features/navigation.js"></script>
+  <script defer src="assets/js/features/reveal.js"></script>
+  <script defer src="assets/js/features/placeholders.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+
+<div aria-hidden="true" class="noise"></div>
+<div aria-hidden="true" class="orb orb-light-blue"></div>
+<div aria-hidden="true" class="orb orb-deep-blue"></div>
+<div id="site-navbar"></div>
+<main>
+
+<!-- Section 1: Hero -->
+<section class="hero section-pad">
+<div class="hero-grid shell">
+<div class="hero-copy reveal">
+<div class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR NEW PROJECTS</div>
+<h1>
+  <span class="hero-title-primary">Websites that feel designed.</span>
+  <span class="hero-title-secondary">Code that stays clean.</span>
+</h1>
+<p class="hero-lead">I’m Yurose — a web designer &amp; developer helping small businesses and local brands turn their character into a website customers remember.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="work.html">View my work <span>↗</span></a>
+<a class="button button-ghost" href="about.html">About me</a>
+</div>
+<div class="hero-note">WEB DESIGN · DEVELOPMENT · UX · AVAILABLE WORLDWIDE</div>
+</div>
+</div>
+</section>
+<div id="motivation-ticker"></div>
+
+<!-- Section 2: Selected work -->
+<section class="section-pad" id="work">
+<div class="shell">
+<div class="section-heading section-heading--compact reveal">
+<div>
+<span class="section-index">01 / SELECTED WORK</span>
+<h2>Projects with purpose,<br/>personality and pace.</h2>
+</div>
+<p>Only my strongest work lives here — the problem solved, my actual role and the stack used. Everything else stays in Labs.</p>
+</div>
+<div class="projects-grid" id="projects-grid"></div>
+</div>
+</section>
+
+<!-- Section 3: Philosophy -->
+<section class="manifesto section-pad">
+<div class="shell manifesto-inner reveal">
+<span class="section-index">02 / PHILOSOPHY</span>
+<blockquote>“Good design isn’t decoration. It’s the reason someone <em>stays, trusts and comes back.</em>”</blockquote>
+</div>
+</section>
+
+<!-- Section 4: Contact -->
+<section class="contact section-pad" id="contact">
+<div class="shell contact-inner reveal">
+<div class="contact-kicker"><span class="status-dot"></span> CURRENTLY BOOKING NEW PROJECTS</div>
+<h2>Have a project, idea or<br/>interesting conversation?</h2>
+<p>Tell me what you’re building. I’ll reply within 24 hours.</p>
+<a class="contact-email" href="mailto:yurosenagar@gmail.com">yurosenagar@gmail.com <span>↗</span></a>
+<div class="social-row" id="social-links"></div>
+</div>
+</section>
+
+</main>
+<div id="site-footer"></div>
+
+</body>
+</html>

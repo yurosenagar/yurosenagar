@@ -1,0 +1,50 @@
+/* File: assets/css/tokens.css */
+
+:root {
+  /* Clean light-first palette: white page, blue accents, navy headings */
+  --blue: #2563eb;
+  --blue-dark: #1d4ed8;
+  --navy: #0f1f3d;
+  --text: #26374d;
+  --muted: #64748b;
+  --line: #dce4ef;
+  --surface: #ffffff;
+  --soft: #f6f8fc;
+  --page: #ffffff;
+  --shadow: 0 24px 70px rgba(30, 64, 175, 0.13);
+
+  /* Availability / status green */
+  --green: #22c55e;
+  --green-soft: #166534;
+
+  /* Aliases kept for the modular styles */
+  --bg: var(--page);
+  --panel: var(--surface);
+  --panel-2: var(--soft);
+  --white: var(--navy);          /* heading colour */
+  --accent: var(--blue);
+  --blue-soft: var(--blue);
+  --blue-deep: #dbeafe;
+  --red: var(--blue-dark);
+  --red-soft: var(--blue-dark);
+
+  /* One font throughout the whole site */
+  --mono: "Space Grotesk", system-ui, sans-serif;
+  --sans: "Space Grotesk", system-ui, sans-serif;
+
+  --radius: 18px;
+  --shell: min(1180px, calc(100% - 48px));
+}
+
+[data-theme="dark"] {
+  --navy: #f8fafc;
+  --text: #d4deec;
+  --muted: #9dacbf;
+  --line: #2a3f63;
+  --surface: #122344;
+  --soft: #0e1c38;
+  --page: #0b1730;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+  --green-soft: #86efac;
+  --blue-deep: #16294d;
+}

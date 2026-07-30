@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- File: labs/index.html -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yurose Labs — a playground of hand-written HTML, CSS and JavaScript experiments.">
+  <meta name="theme-color" content="#09111a">
+  <title>yurose labs — playground</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/labs.css">
+
+  <script defer src="assets/js/data/experiments.js"></script>
+  <script defer src="assets/js/utils/dom.js"></script>
+  <script defer src="assets/js/components/experiment-card.js"></script>
+  <script defer src="assets/js/features/reveal.js"></script>
+  <script defer src="assets/js/main.js"></script>
+</head>
+<body>
+
+<div aria-hidden="true" class="orb orb-red"></div>
+<div aria-hidden="true" class="orb orb-deep-blue"></div>
+
+<header class="labs-header">
+  <nav class="labs-nav" aria-label="Labs navigation">
+    <a class="labs-brand" href="index.html" id="labs-brand">yurose labs</a>
+    <a class="labs-back" href="https://yurosenagar.com" id="labs-back">← yurosenagar.com</a>
+  </nav>
+</header>
+
+<main>
+<section class="labs-hero section-pad">
+<div class="shell reveal">
+<div class="eyebrow"><span class="status-dot"></span> PLAYGROUND — SEPARATE FROM CLIENT WORK</div>
+<h1>Where I break things<br/>on <em>purpose.</em></h1>
+<p>Hand-written experiments in HTML, CSS and JavaScript. No frameworks, no templates — just code I’m learning by building, deployed as it happens.</p>
+</div>
+</section>
+
+<section class="section-pad" id="experiments">
+<div class="shell">
+<div class="experiments-grid" id="experiments-grid"></div>
+</div>
+</section>
+</main>
+
+<footer class="labs-footer">
+  <div class="shell">
+    <span>© <span id="year"></span> <span id="labs-footer-left"></span></span>
+    <span id="labs-footer-right"></span>
+  </div>
+</footer>
+
+</body>
+</html>

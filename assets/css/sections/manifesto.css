@@ -1,0 +1,31 @@
+/* File: assets/css/sections/manifesto.css */
+
+/* Quiet quote band on the soft background */
+.manifesto {
+  background: var(--soft);
+  border-block: 1px solid var(--line);
+  color: var(--navy);
+}
+.manifesto .section-index { color: var(--blue); }
+.manifesto blockquote {
+  margin: 40px 0 0;
+  max-width: 1020px;
+  font-size: clamp(2.2rem, 4.6vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -.045em;
+  font-weight: 600;
+  color: var(--navy);
+}
+.manifesto blockquote em { font-style: normal; color: var(--blue); }
+
+/* Values grid (About page) */
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); margin-top: 60px; }
+.values-grid div { padding: 28px 35px 0 0; border-right: 1px solid var(--line); min-height: 160px; }
+.values-grid div:not(:first-child) { padding-left: 35px; }
+.values-grid div:last-child { border-right: 0; }
+.values-grid span { font: 700 .68rem/1 var(--sans); letter-spacing: .1em; }
+.values-grid div:nth-child(1) span { color: var(--green-soft); }
+.values-grid div:nth-child(2) span { color: var(--blue); }
+.values-grid div:nth-child(3) span { color: var(--blue-dark); }
+.values-grid h3 { font-size: 1.35rem; margin: 20px 0 8px; color: var(--navy); }
+.values-grid p { color: var(--muted); margin: 0; font-size: .92rem; }
