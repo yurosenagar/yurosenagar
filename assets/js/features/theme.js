@@ -4,9 +4,8 @@
 (function applyInitialTheme() {
   let stored = null;
   try { stored = localStorage.getItem('yurose-theme'); } catch (error) { /* private mode */ }
-  const preferred = stored
-    || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-  document.documentElement.dataset.theme = preferred;
+  // Light is the default for first-time visitors; their toggle choice is remembered.
+  document.documentElement.dataset.theme = stored || 'light';
 })();
 
 window.YuroseSite = window.YuroseSite || {};
