@@ -19,13 +19,13 @@
 .manifesto blockquote em { font-style: normal; color: var(--blue); }
 
 /* Values grid (About page) */
-.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); margin-top: 60px; }
-.values-grid div { padding: 28px 35px 0 0; border-right: 1px solid var(--line); min-height: 160px; }
-.values-grid div:not(:first-child) { padding-left: 35px; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); margin-top: var(--space-9); }
+.values-grid div { padding: var(--space-7) var(--space-7) 0 0; border-right: 1px solid var(--line); min-height: 160px; }
+.values-grid div:not(:first-child) { padding-left: var(--space-7); }
 .values-grid div:last-child { border-right: 0; }
 .values-grid span { font: 700 .68rem/1 var(--sans); letter-spacing: .1em; }
 .values-grid div:nth-child(1) span { color: var(--green-soft); }
 .values-grid div:nth-child(2) span { color: var(--blue); }
 .values-grid div:nth-child(3) span { color: var(--blue-dark); }
-.values-grid h3 { font-size: 1.35rem; margin: 20px 0 8px; color: var(--navy); }
+.values-grid h3 { font-size: 1.35rem; margin: var(--space-5) 0 var(--space-2); color: var(--navy); }
 .values-grid p { color: var(--muted); margin: 0; font-size: .92rem; }
