@@ -1,5 +1,8 @@
 /* File: assets/css/sections/work.css */
 
+/* Extra breathing room below the fixed navbar on this page's hero */
+.page-hero.section-pad { padding-top: clamp(92px, 10vw, 132px); }
+
 /* Japanese dining project artwork */
 .project-japan .project-visual { background: radial-gradient(circle at 18% 0%, rgba(229,73,37,.18), transparent 36%), #e8e1d5; color: #171513; }
 .phone { position: absolute; width: 254px; height: 490px; background: #111; border: 8px solid #191919; border-radius: 40px; box-shadow: 0 40px 80px rgba(30,20,10,.28); overflow: hidden; }
