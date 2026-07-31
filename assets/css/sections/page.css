@@ -23,11 +23,12 @@
   color: var(--muted);
 }
 
-/* About page hero only — sits right under the floating nav pill
-   (nav is fixed, 20px from top, ~64px tall, so its bottom edge is ~84px).
-   A flat value keeps a small, consistent gap instead of the shared
-   .page-hero clamp, which shrinks below that on medium desktop widths. */
-.page-hero.about-hero { padding-top: 88px; }
+/* About page hero only — sits close under the floating nav pill
+   (nav is fixed, 20px from top, ~64px tall, bottom edge ~84px). This is
+   deliberately tight: the nav is a translucent, blurred glass pill, so
+   the heading sitting close beneath it is the intended look, not an
+   overlap bug. Reduced from 88px — bump back up if it reads as cramped. */
+.page-hero.about-hero { padding-top: var(--space-8); }
 
 /* About page */
 .about-grid {
