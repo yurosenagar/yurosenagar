@@ -23,12 +23,7 @@
   color: var(--muted);
 }
 
-/* About page hero only — sits close under the floating nav pill
-   (nav is fixed, 20px from top, ~64px tall, bottom edge ~84px). This is
-   deliberately tight: the nav is a translucent, blurred glass pill, so
-   the heading sitting close beneath it is the intended look, not an
-   overlap bug. Reduced from 88px — bump back up if it reads as cramped. */
-.page-hero.about-hero { padding-top: var(--space-8); }
+.page-hero.about-hero { padding-top: var(--space-9); }
 
 /* About page */
 .about-grid {
@@ -66,7 +61,7 @@
   font-size: 11px;
   letter-spacing: .16em;
   color: var(--muted);
-  margin-bottom: 6px;
+  margin-bottom: var(--space-2);
 }
 
 .about-fact strong { color: var(--white); font-size: 15px; font-weight: 600; }
@@ -95,7 +90,7 @@
   background: var(--soft);
   border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 6px 10px;
+  padding: var(--space-2) var(--space-3);
 }
 
 /* Shared call-to-action band (home + interior pages) */
@@ -111,7 +106,7 @@
   gap: var(--space-5);
 }
 
-.cta-band h2 { margin: 0 0 6px; font-size: clamp(22px, 2.6vw, 30px); color: var(--white); }
+.cta-band h2 { margin: 0 0 var(--space-2); font-size: clamp(22px, 2.6vw, 30px); color: var(--white); }
 
 .cta-band p { margin: 0; color: var(--muted); }
 
