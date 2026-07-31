@@ -1,6 +1,7 @@
 /* File: assets/css/sections/contact.css */
 
 /* Solid blue contact band, white type — works in both themes */
+.contact.section-pad { padding-top: 170px; }
 .contact { background: var(--blue); }
 .contact-inner {
   display: flex;
@@ -42,3 +43,7 @@
   color: #ffffff;
 }
 .social-row a:hover { background: #ffffff; border-color: #ffffff; color: var(--blue); }
+
+@media (max-width: 760px) {
+  .contact.section-pad { padding-top: 110px; }
+}
