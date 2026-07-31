@@ -23,6 +23,12 @@
   color: var(--muted);
 }
 
+/* About page hero only — sits right under the floating nav pill
+   (nav is fixed, 20px from top, ~64px tall, so its bottom edge is ~84px).
+   A flat value keeps a small, consistent gap instead of the shared
+   .page-hero clamp, which shrinks below that on medium desktop widths. */
+.page-hero.about-hero { padding-top: 88px; }
+
 /* About page */
 .about-grid {
   display: grid;
