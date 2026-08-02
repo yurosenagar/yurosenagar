@@ -1,8 +1,10 @@
-# yurose nagar — modular personal website
+# yurosenagar.com
 
-A simple, editable multi-page personal website using ordinary HTML, CSS and JavaScript — no framework, no build step. One design system throughout: Space Grotesk, a light-first palette with a single blue accent, and a dark navy-blue theme you can switch to.
+Personal portfolio and freelance web presence for **Yurose Nagar** — a multi-page website written in ordinary HTML, CSS and JavaScript. No framework, no build step, no dependencies.
 
 **Live:** [yurosenagar.com](https://yurosenagar.com)
+
+---
 
 ## Documentation
 
@@ -19,134 +21,129 @@ Full project documentation lives in [`docs/`](docs/README.md):
 
 | Page | File | Contents |
 |---|---|---|
-| Home | `index.html` | 7 blueprint sections: hero (open-for-freelance signal), selected work, skills snapshot, journey timeline, featured lab, about preview, contact CTA |
-| Work | `work.html` | Projects grouped by category: UX case studies, development, AI-assisted |
-| About | `about.html` | Story, philosophy, values, toolkit, how I use AI |
+| Home | `index.html` | Hero (availability signal), ticker, selected work, philosophy, contact band |
+| Work | `work.html` | UX case studies + services |
+| About | `about.html` | Story, philosophy, values, toolkit |
 | Journey | `journey.html` | Learning timeline + reflective entries |
-| About this website | `about-this-site.html` | The portfolio as a documented development project |
-| Contact | `contact.html` | Let's connect — email, GitHub, LinkedIn, socials |
+| About this website | `about-this-site.html` | The portfolio documented as its own project |
+| Contact | `contact.html` | Email and social links |
 | Labs | `labs/index.html` | Open workshop — deploys to labs.yurosenagar.com |
 
-Blueprint publishing rule: *"Would I show this to a client or in an interview as my best work?"* → main site. *"Am I still practicing on this?"* → a Labs entry.
+Navigation is **Work · Labs · Contact**. About, Journey and About-this-website are reached from in-page links.
 
-## Labs (labs.yurosenagar.com)
+**Publishing rule:** *"Would I show this to a client or in an interview as my best work?"* → main site. *"Am I still practicing on this?"* → a Labs entry.
 
-`labs/` is a fully standalone mini-site: it has its own `assets/` and no dependency on the parent folder, so it works locally (open `labs/index.html`) and as a subdomain.
+## Running it locally
 
-Adding an experiment:
+Double-click `index.html` — that's it. Nothing to install, nothing to build.
 
-1. Build it in its own folder, e.g. `labs/css-clock/` with its own `index.html`.
-2. Add an entry in `labs/assets/js/data/experiments.js` with `href: 'css-clock/'` and status `live`, `wip` or `idea`.
+For live reload while editing, use VS Code with the **Live Server** extension.
 
-Deploying the subdomain on Vercel:
+## Making changes
 
-1. In your Vercel project → Settings → Domains, add `labs.yurosenagar.com`.
-2. Either point it at this same project and set the subdomain's root to `labs/` (Settings → General → Root Directory in a second Vercel project connected to the same repo is the simplest way), or create a new Vercel project from the same GitHub repo with Root Directory = `labs`.
-3. Vercel shows you a CNAME record — add it at your DNS provider.
-4. Once live, change the Labs link in `assets/js/data/site-content.js` from `labs/index.html` to `https://labs.yurosenagar.com`.
+| Change | Where |
+|---|---|
+| Any text, projects, services, timeline, links, footer | `assets/js/data/site-content.js` |
+| Colours, spacing scale, fonts, radii (both themes) | `assets/css/tokens.css` |
+| Navbar, buttons, ticker, project cards, footer styles | `assets/css/components.css` |
+| Section-specific styles | `assets/css/sections/*.css` |
+| Mobile layout | `assets/css/responsive.css` |
+| Page structure and section wording | the relevant `*.html` |
+| Behaviour (theme, menu, animations) | `assets/js/features/` |
+| Reusable markup | `assets/js/components/` |
 
-## Start here
+**Simple rule:** words and links → `site-content.js` · appearance → CSS · behaviour → `features/` · reusable markup → `components/`
 
-1. Open `index.html` in your browser.
-2. Edit projects, journal titles, navigation, motivation messages and links in `assets/js/data/site-content.js`.
-3. Edit the dark-blue, green and red colour palette in `assets/css/tokens.css`.
-4. Edit section wording directly in each page's HTML file.
+Useful details:
 
-Notes for multi-page editing:
-
-- The navbar automatically highlights the current page (`aria-current` + `.active` style).
-- `<div id="journal-list" data-limit="2">` limits how many journal entries show (used on the home page). Omit `data-limit` to show all.
-- Interior-page headers, the about layout and the CTA band live in `assets/css/sections/page.css`.
-
-No package installation or build command is required.
+- The navbar highlights the current page automatically (`aria-current` + `.active`).
+- Project grids can be filtered with `data-category="ux"` or limited with `data-limit="2"`.
+- New spacing values should come from the `--space-1` … `--space-9` scale in `tokens.css`.
+- Light is the default theme; the visitor's choice is remembered in `localStorage`.
 
 ## Directory structure
 
 ```text
-Path: yurose-personal-site-race-clock/
-
-yurose-personal-site-race-clock/
-├── index.html
+yurosenagar/
+├── index.html                  # Home
+├── work.html                   # Work + Services
+├── about.html                  # About
+├── journey.html                # Learning journey
+├── about-this-site.html        # The site as a documented project
+├── contact.html                # Contact
 ├── README.md
-└── assets/
-    ├── css/
-    │   ├── tokens.css
-    │   ├── base.css
-    │   ├── layout.css
-    │   ├── components.css
-    │   ├── responsive.css
-    │   └── sections/
-    │       ├── hero.css
-    │       ├── work.css
-    │       ├── manifesto.css
-    │       ├── journal.css
-    │       └── contact.css
-    ├── icons/
-    │   └── favicon.svg
-    └── js/
-        ├── main.js
-        ├── components/
-        │   ├── navbar.js
-        │   ├── race-clock.js
-        │   ├── motivation-ticker.js
-        │   ├── project-card.js
-        │   ├── journal-list.js
-        │   ├── social-links.js
-        │   └── footer.js
-        ├── data/
-        │   └── site-content.js
-        ├── features/
-        │   ├── navigation.js
-        │   ├── race-clock.js
-        │   ├── reveal.js
-        │   └── placeholders.js
-        ├── services/
-        │   └── weather-api.js
-        ├── types/
-        │   └── content-types.js
-        └── utils/
-            ├── dom.js
-            ├── date-time.js
-            └── weather-code.js
+├── docs/                       # Project documentation
+│   ├── README.md
+│   ├── 01-product-requirements.md
+│   ├── 02-design.md
+│   ├── 03-technical-requirements.md
+│   └── 04-implementation-plan.md
+├── assets/
+│   ├── css/
+│   │   ├── tokens.css          # Design tokens + dark theme
+│   │   ├── base.css            # Reset, body, focus, reveal
+│   │   ├── layout.css          # Shell, section padding, headings
+│   │   ├── components.css      # Navbar, buttons, ticker, cards, footer
+│   │   ├── responsive.css      # Media queries
+│   │   └── sections/
+│   │       ├── hero.css
+│   │       ├── work.css        # Project card artwork
+│   │       ├── manifesto.css   # Philosophy band + values grid
+│   │       ├── journal.css
+│   │       ├── contact.css
+│   │       └── page.css        # Interior pages, timeline, CTA bands
+│   ├── icons/
+│   │   └── favicon.svg
+│   └── js/
+│       ├── main.js             # Entry point
+│       ├── data/
+│       │   └── site-content.js # ALL editable content
+│       ├── components/         # navbar, footer, project-card, services,
+│       │                       # journey-timeline, journal-list,
+│       │                       # motivation-ticker, social-links
+│       ├── features/           # theme, navigation, reveal, placeholders
+│       ├── utils/
+│       │   └── dom.js
+│       └── types/
+│           └── content-types.js
+└── labs/                       # Standalone sub-site with its own assets
+    ├── index.html
+    └── assets/{css,js,icons}/
 ```
 
-## Easiest edits
+**Load order matters.** CSS: `tokens → base → layout → components → sections/* → responsive`. JS: `theme.js` runs synchronously in `<head>` (so the theme applies before first paint); everything else is deferred and loads types → data → utils → components → features → `main.js`.
 
-| Change | File path |
-|---|---|
-| Logo text, menu items, motivation messages, projects, journal and links | `assets/js/data/site-content.js` |
-| Page title and main section wording | `index.html` |
-| Main colours | `assets/css/tokens.css` |
-| Navbar, buttons, race clock, ticker and project card styling | `assets/css/components.css` |
-| Hero spacing and typography | `assets/css/sections/hero.css` |
-| Mobile layout | `assets/css/responsive.css` |
-| Live weather request | `assets/js/services/weather-api.js` |
-| Weather condition wording | `assets/js/utils/weather-code.js` |
+## Labs (labs.yurosenagar.com)
 
-## Current design settings
+`labs/` is fully standalone — its own `assets/`, no dependency on the parent — so it works locally (open `labs/index.html`) and as a subdomain.
 
-- Browser page title and header wordmark: `yurose nagar`
-- Font: Space Grotesk throughout
-- Navigation: slightly larger, bolder and brighter
-- Main palette: subtle dark blue, progress green and occasional racing red
-- Hero: the second headline line is slightly smaller
-- Race clock: local Sydney time, date and current weather only
-- Motivation strip: smooth right-to-left animation replacing the old four status boxes
-- Selected Work heading: slightly reduced in size
+**Adding an experiment**
 
-## Live weather
+1. Build it in its own folder, e.g. `labs/css-clock/` with its own `index.html`.
+2. Add an entry at the top of `labs/assets/js/data/experiments.js` with `href: 'css-clock/'` and a status: `learning`, `prototype`, `completed`, `improving` or `archived`.
 
-The race clock requests Sydney’s current temperature and weather condition from Open-Meteo. The website still works without the weather request; it will show `Weather unavailable` when the browser is offline or the service cannot be reached.
+**Deploying the subdomain on Vercel**
 
-## Simple editing rule
+1. Create a second Vercel project from the same GitHub repo, with **Root Directory = `labs`**.
+2. Add `labs.yurosenagar.com` as its custom domain.
+3. Add the CNAME record Vercel gives you at your DNS provider.
+4. Once live, change the Labs link in `assets/js/data/site-content.js` from `labs/index.html` to `https://labs.yurosenagar.com`.
 
-- Change **words and links** in `site-content.js` or `index.html`.
-- Change **colours and appearance** in the CSS files.
-- Change **behaviour** in `assets/js/features/`.
-- Change **API calls** in `assets/js/services/`.
-- Change **reusable markup** in `assets/js/components/`.
+## Deployment
 
-## Recommended editing setup
+Pushing to `main` deploys automatically:
 
-The site opens directly by double-clicking `index.html`. For more reliable live weather and automatic browser refresh while editing, use VS Code with the **Live Server** extension.
-# yurosenagar
+```bash
+git status            # what changed
+git add -A            # stage it
+git commit -m "..."   # snapshot it
+git push              # GitHub → Vercel deploys
+```
+
+Hosted on Vercel from `github.com/yurosenagar/yurosenagar`. No build command, no framework preset — the repository root is served as static files. Previous deployments can be promoted from the Vercel dashboard to roll back.
+
+## Tech
+
+HTML5 · CSS3 (custom properties) · vanilla JavaScript · Space Grotesk (Google Fonts) · Git/GitHub · Vercel
+
+Built with AI assistance for structure and drafting; every line reviewed, modified and tested by hand. The full account is on the [About this website](about-this-site.html) page.
