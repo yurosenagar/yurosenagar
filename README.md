@@ -1,8 +1,21 @@
 # yurose nagar — modular personal website
 
-A simple, editable multi-page personal website using ordinary HTML, CSS and JavaScript. Same design system throughout: Space Grotesk, dark-blue base with green and red accents, F1-inspired clock and motivation ticker.
+A simple, editable multi-page personal website using ordinary HTML, CSS and JavaScript — no framework, no build step. One design system throughout: Space Grotesk, a light-first palette with a single blue accent, and a dark navy-blue theme you can switch to.
 
-## Pages (following the yurosenagar.com website blueprint)
+**Live:** [yurosenagar.com](https://yurosenagar.com)
+
+## Documentation
+
+Full project documentation lives in [`docs/`](docs/README.md):
+
+| Document | Answers |
+|---|---|
+| [Product Requirements](docs/01-product-requirements.md) | Why it exists, who it's for, what success looks like |
+| [Design](docs/02-design.md) | Tokens, typography, components, theming, responsive rules |
+| [Technical Requirements](docs/03-technical-requirements.md) | Stack, architecture, data model, standards, deployment |
+| [Implementation Plan](docs/04-implementation-plan.md) | Phases, tasks, acceptance criteria, working method |
+
+## Pages
 
 | Page | File | Contents |
 |---|---|---|
