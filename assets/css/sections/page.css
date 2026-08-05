@@ -23,7 +23,7 @@
   color: var(--muted);
 }
 
-.page-hero.about-hero { padding-top: var(--space-9); }
+.page-hero.about-hero { padding-top: calc(var(--space-9) + var(--space-8)); }
 
 /* About page */
 .about-grid {
