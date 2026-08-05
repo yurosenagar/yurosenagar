@@ -70,6 +70,10 @@
   /* Services / skills cards */
   .skills-grid { grid-template-columns: 1fr; gap: 12px; }
 }
+/* Interior page heroes must clear the fixed navbar */
+main .page-hero {
+  padding-top: var(--nav-clearance);
+}
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
