@@ -12,6 +12,10 @@
   --soft: #f6f8fc;
   --page: #ffffff;
   --shadow: 0 24px 70px rgba(30, 64, 175, 0.13);
+   /* ...your existing tokens... */
+
+  /* Navbar clearance: 20px top offset + 64px bar height + 44px breathing room */
+  --nav-clearance: 128px;
 
   /* Availability / status green */
   --green: #22c55e;
