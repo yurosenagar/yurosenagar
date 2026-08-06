@@ -34,3 +34,10 @@
 .window-content small { font: 600 8px/1 var(--mono); letter-spacing: .14em; }
 .window-content h3 { font: 500 32px/1.05 var(--sans); max-width: 380px; margin: 28px 0 18px; }
 .window-content p { font-size: 12px; color: #6f645c; max-width: 300px; }
+
+@media (max-width: 760px) {
+  .phone-a { left: 7%; transform: rotate(-5deg) scale(.78); }
+  .japan-mark { right: 2%; font-size: 62px; }
+  .ktm-window { width: 78%; right: -8%; top: 14%; }
+  .ktm-title strong { font-size: 50px; }
+}

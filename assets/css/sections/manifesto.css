@@ -29,3 +29,8 @@
 .values-grid div:nth-child(3) span { color: var(--blue-dark); }
 .values-grid h3 { font-size: 1.35rem; margin: var(--space-5) 0 var(--space-2); color: var(--navy); }
 .values-grid p { color: var(--muted); margin: 0; font-size: .92rem; }
+
+@media (max-width: 760px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .values-grid div, .values-grid div:not(:first-child) { border-right: 0; border-bottom: 1px solid rgba(10,13,16,.2); padding: 26px 0; min-height: 0; }
+}

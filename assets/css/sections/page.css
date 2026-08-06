@@ -25,6 +25,10 @@
 
 .page-hero.about-hero { padding-top: var(--space-9); }
 
+@media (max-width: 760px) {
+  .page-hero { padding-top: 128px; }
+}
+
 /* About page */
 .about-grid {
   display: grid;
@@ -41,6 +45,10 @@
 }
 
 .about-story p strong { color: var(--blue); font-weight: 600; }
+
+@media (max-width: 760px) {
+  .about-story p { font-size: 16px; }
+}
 
 .about-facts {
   display: grid;
@@ -93,6 +101,10 @@
   padding: var(--space-2) var(--space-3);
 }
 
+@media (max-width: 760px) {
+  .skills-grid { grid-template-columns: 1fr; gap: 12px; }
+}
+
 /* Shared call-to-action band (home + interior pages) */
 .cta-band {
   background: var(--soft);
@@ -109,6 +121,11 @@
 .cta-band h2 { margin: 0 0 var(--space-2); font-size: clamp(22px, 2.6vw, 30px); color: var(--white); }
 
 .cta-band p { margin: 0; color: var(--muted); }
+
+@media (max-width: 760px) {
+  .cta-band { flex-direction: column; align-items: flex-start; }
+  .cta-band .button { width: 100%; }
+}
 
 /* Section footer link, e.g. "View all projects" */
 .section-more { margin-top: var(--space-7); }
@@ -149,6 +166,11 @@
 .timeline-next .timeline-year { color: var(--blue); }
 .timeline-next .timeline-dot { background: var(--green); box-shadow: 0 0 0 4px rgba(34, 197, 94, .15); animation: pulse 2s ease-in-out infinite; }
 .timeline-next p { color: var(--blue); font-weight: 600; }
+
+@media (max-width: 760px) {
+  .timeline-row { grid-template-columns: 46px 16px 1fr; gap: 12px; padding: 15px 0; }
+  .timeline-row p { font-size: 15px; }
+}
 
 /* Featured lab band (homepage) */
 .lab-feature {

@@ -84,6 +84,22 @@
 }
 .theme-toggle:hover { border-color: #93c5fd; color: var(--blue); }
 
+@media (max-width: 760px) {
+  .nav-shell { grid-template-columns: 1fr auto; padding: 8px 10px 8px 18px; }
+  .brand { font-size: 16px; }
+  .nav-toggle { display: grid; place-content: center; width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; background: var(--surface); cursor: pointer; }
+  .nav-toggle span { display: block; width: 17px; height: 1px; background: var(--text); margin: 2px; transition: .25s ease; }
+  .nav-toggle[aria-expanded="true"] span:first-child { transform: translateY(2.5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:last-child { transform: translateY(-2.5px) rotate(-45deg); }
+  .nav-links { position: absolute; top: 70px; left: 16px; right: 16px; display: none; flex-direction: column; align-items: stretch; padding: 10px; border: 1px solid var(--line); border-radius: 22px; background: var(--page); box-shadow: var(--shadow); }
+  .nav-links.open { display: flex; }
+  .nav-links a { text-align: center; padding: 15px; font-size: 15px; }
+  .nav-links .nav-cta { margin-left: 0; }
+
+  /* Theme toggle inside the mobile dropdown menu */
+  .theme-toggle { width: 100%; height: 46px; margin: 4px 0 0; border-radius: 999px; }
+}
+
 /* Buttons */
 .button {
   min-height: 49px;
@@ -143,6 +159,14 @@
 .ticker-dot-3 { background: var(--blue-dark); }
 @keyframes ticker-scroll { to { transform: translateX(-50%); } }
 
+@media (max-width: 760px) {
+  .ticker-item { padding: 18px 24px; font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { transform: translateX(0); }
+}
+
 /* Project cards */
 .projects-grid { display: grid; gap: 20px; max-width: 1160px; margin-inline: auto; }
 .project-card {
@@ -175,6 +199,12 @@
   font-weight: 600;
 }
 
+@media (max-width: 760px) {
+  .project-visual { min-height: 390px; }
+  .project-meta { grid-template-columns: 1fr; gap: 22px; padding: 24px; }
+  .project-meta ul { margin-top: 8px; }
+}
+
 /* Project card additions: role and link */
 .project-role { margin: 16px 0 0; font-size: .84rem; color: var(--text); letter-spacing: 0; }
 .project-role span { display: block; font-size: .62rem; font-weight: 700; letter-spacing: .12em; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; }
@@ -188,3 +218,8 @@ footer { border-top: 1px solid var(--line); background: var(--page); padding: 28
 .footer-inner span:nth-child(2) { text-align: center; }
 .footer-inner a { text-align: right; }
 .footer-inner a:hover { color: var(--blue); }
+
+@media (max-width: 760px) {
+  .footer-inner { grid-template-columns: 1fr auto; gap: 16px; }
+  .footer-inner span:nth-child(2) { display: none; }
+}

@@ -46,4 +46,6 @@
 
 @media (max-width: 760px) {
   .contact.section-pad { padding-top: 110px; }
+  .contact-inner { padding: 32px 24px; min-height: 540px; }
+  .contact-email { font-size: clamp(17px, 5.4vw, 24px); }
 }

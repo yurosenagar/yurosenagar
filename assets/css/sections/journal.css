@@ -6,3 +6,9 @@
 .journal-row span, .journal-row i { font: 600 9px/1 var(--mono); color: var(--muted); font-style: normal; }
 .journal-row strong { color: var(--navy); font-size: 20px; font-weight: 500; letter-spacing: -.025em; }
 .journal-row b { justify-self: end; font-weight: 400; }
+
+@media (max-width: 760px) {
+  .journal-row { grid-template-columns: 38px 1fr 24px; gap: 12px; }
+  .journal-row i { display: none; }
+  .journal-row strong { font-size: 17px; }
+}

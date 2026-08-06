@@ -46,28 +46,35 @@ yurosenagar/
 ├── index.html
 ├── about.html
 ├── journey.html
+├── work.html
+├── contact.html
 ├── about-this-site.html
 ├── assets/
 │   ├── css/
-│   │   ├── main.css          # imports everything, defines load order
 │   │   ├── tokens.css        # colours, spacing scale, typography
 │   │   ├── base.css          # resets, body, headings, links
 │   │   ├── layout.css        # .shell, .section-pad, grid systems
-│   │   ├── components/       # one file per component, all breakpoints inside
-│   │   └── pages/            # page-specific overrides, loaded last
+│   │   ├── components.css    # navbar, buttons, ticker, project cards, footer
+│   │   └── sections/         # one file per page section, all breakpoints inside
 │   ├── js/
 │   └── img/
+├── labs/
+├── docs/
 └── CLAUDE.md
 ```
 
 ### CSS conventions
 
-**One component, one file, all breakpoints included.** Media queries live next to
-the rules they modify — never in a separate `responsive.css`. This is the single
-most important convention in this project (see "Lessons learned" below).
+**One component or section, one file, all breakpoints included.** Media queries
+live next to the rules they modify — never in a separate `responsive.css`. This
+is the single most important convention in this project (see "Lessons learned"
+below).
 
-**Load order is defined in `main.css`** via `@import`, so the cascade is visible
-in one place. Page styles load last so they can override components.
+**There is no `main.css` and no `@import`.** Each HTML page links the stylesheets
+it needs directly in `<head>`, always in the same order: `tokens.css` →
+`base.css` → `layout.css` → `components.css` → the `sections/*.css` files that
+page actually uses. That fixed order is what makes the cascade predictable —
+keep it when adding a stylesheet link to a page.
 
 **Use existing design tokens.** Spacing comes from the `--space-*` scale in
 `tokens.css`. Compose with `calc()` rather than introducing raw pixel values:
@@ -163,7 +170,11 @@ come from nowhere, use DevTools to jump straight to the winning source.
 
 **Splitting CSS by file type causes bugs.** Having `responsive.css` separate from
 component styles meant one component's rules lived in multiple files, fighting
-each other across the cascade. Splitting by component instead.
+each other across the cascade. Split by component/section instead. (This drifted
+back in once — a `responsive.css` reappeared holding every page's mobile
+overrides. Fixed 2026-08-06 by moving each rule back into the file that owns its
+selector, and deleting three dead rules — `.play-grid`, `.play-card`,
+`.portrait-art` — that had no matching markup anywhere in the site.)
 
 **Dead classes mislead.** `about-hero` sat in the HTML with no matching rule for a
 while, making the page look like it had an override it did not. Remove classes

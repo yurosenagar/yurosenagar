@@ -3,6 +3,10 @@
 .shell { width: var(--shell); margin-inline: auto; }
 .section-pad { padding: 100px 0; }
 
+@media (max-width: 760px) {
+  .section-pad { padding: 60px 0; }
+}
+
 .section-index {
   display: inline-block;
   color: var(--blue);
@@ -35,4 +39,8 @@
 
 .section-heading--compact h2 {
   font-size: clamp(2.2rem, 4vw, 3.6rem);
+}
+
+@media (max-width: 760px) {
+  .section-heading { grid-template-columns: 1fr; gap: 26px; }
 }
