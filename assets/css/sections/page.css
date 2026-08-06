@@ -3,7 +3,7 @@
 /* Interior page header + about page + shared CTA band */
 
 .page-hero {
-  padding-top: clamp(var(--space-8), 8vw, 96px);
+  padding-top: var(--nav-clearance);
 }
 
 .page-hero .eyebrow { margin-bottom: var(--space-4); }
@@ -23,11 +23,7 @@
   color: var(--muted);
 }
 
-.page-hero.about-hero { padding-top: var(--space-9); }
-
-@media (max-width: 760px) {
-  .page-hero { padding-top: 128px; }
-}
+.page-hero.about-hero { padding-top: calc(var(--space-9) + var(--space-8)); }
 
 /* About page */
 .about-grid {

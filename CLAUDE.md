@@ -85,7 +85,8 @@ padding-top: calc(var(--space-9) + var(--space-8));
 
 **Navbar clearance.** The header is `position: fixed` with a `20px` top offset and
 a `64px` bar height, so it occupies zero height in normal flow. Interior page
-heroes must add their own top padding to clear it — roughly `128px` total.
+heroes must add their own top padding to clear it — use the `--nav-clearance`
+token (`128px`) in `tokens.css` rather than repeating the number.
 
 **Shared markup is injected with JavaScript.** The navbar and footer are pulled
 into `<div id="site-navbar">` and `<div id="site-footer">` rather than duplicated
